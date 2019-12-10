@@ -6,7 +6,7 @@ public class LogFloatings : MonoBehaviour
 {
     // Private Log properties
     [SerializeField]
-    private float rotationSpeed = 20.0f;
+    private float movementSpeed = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +17,6 @@ public class LogFloatings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        transform.position += transform.up * movementSpeed * Time.deltaTime;
     }
 }
