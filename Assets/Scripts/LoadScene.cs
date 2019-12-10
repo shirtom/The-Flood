@@ -17,15 +17,15 @@ public class LoadScene : MonoBehaviour
         scenePaths = myLoadedAssetBundle.GetAllScenePaths();
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Sepiroth")
-        {
-            Debug.Log("Game Over!");
-            Debug.Log("Scene2 loading: " + scenePaths[0]);
-            SceneManager.LoadScene(scenePaths[0], LoadSceneMode.Single);
-        }
-    }
+    //void ontriggerenter(collider other)
+    //{
+    //    if (other.gameobject.tag == "sepiroth")
+    //    {
+    //        debug.log("game over!");
+    //        debug.log("scene2 loading: " + scenepaths[0]);
+    //        scenemanager.loadscene(scenepaths[0], loadscenemode.single);
+    //    }
+    //}
 
     void OnCollisionEnter(Collision col)
     {
@@ -36,4 +36,12 @@ public class LoadScene : MonoBehaviour
             SceneManager.LoadScene(scenePaths[0], LoadSceneMode.Single);
         }
     }
+
+    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.name);
+    }
+
 }
